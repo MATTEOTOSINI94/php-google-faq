@@ -99,13 +99,19 @@ $dati=[
     ]
 ];
 
-foreach ($dati as $key => $value) {
-   
+foreach ($dati as $value) {
+    $titolo = $value["Title"];
+    $tag = $value["title-tag"];
+    echo $titolo;
+    
+    foreach ($value as $ky =>  $val) {
 
-    foreach ($value as $ky=>  $val) {
-     
-        foreach($val)
-     
+        
+    }
+    foreach($val as $par){
+        $testo = $par;
+        echo $testo;
+        
     }
    
    
