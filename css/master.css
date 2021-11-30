@@ -1,0 +1,26 @@
+.head-cont{
+    border-bottom: 1px solid grey;
+}
+.logo-style{
+    width: 80px;
+}
+.text-style{
+    display: inline-block;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.lista-style{
+    list-style: none;
+    display: inline-block;
+}
+.style-el{
+    text-decoration: none;
+    display: inline-block;
+}
+
+.style-el > a{
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+}
