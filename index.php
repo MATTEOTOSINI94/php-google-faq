@@ -26,7 +26,7 @@ $linkPage = [
 
     foreach ($linkPage as $key => $value) {
         $nameLink = $value["titolo"];
-        $linkPagina = $value["linkAssegnato"];
+        $linkPagina = $value["linkAssegnato"]; 
         
     }
 
@@ -152,7 +152,7 @@ $dati=[
                 <?php
                 
 
-                foreach ($value as $ky =>  $val) {
+                foreach ($value as $val) {
             
                     
                 }
