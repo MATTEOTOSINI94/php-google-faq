@@ -4,30 +4,36 @@ $linkPage = [
 
     [
      "titolo" => " Introduzione",
-     "linkAssegnato" => "Introduzione.php",
+     "linkAssegnato" => "introduzione.php",
     ],
     [
         "titolo" => "Norme Sulla Privacy",
-        "linkAssegnato" => "Normesullaprivacy.php",
+        "linkAssegnato" => "normesullaprivacy.php",
     ],
     [
         "titolo" => "Norme Sulla Privacy",
-        "linkAssegnato" => "Normesullaprivacy.php",
+        "linkAssegnato" => "normesullaprivacy.php",
     ],
     [
         "titolo" => "Termini Di Servizio",
-        "linkAssegnato" => "Terminidiservizio.php",
+        "linkAssegnato" => "terminidiservizio.php",
     ],
     [
         "titolo" => "Domande Frequenti",
-        "linkAssegnato" => "DomandeFrequenti.php",
+        "linkAssegnato" => "index.php",
     ]
     ];
+
+    foreach ($linkPage as $key => $value) {
+        $nameLink = $value["titolo"];
+        $linkPagina = $value["linkAssegnato"];
+        
+    }
 
 $dati=[
     [
         "Title" => "Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?",
-        "title-tag" => "h2",
+        "title-tag" => "h3",
         "paragrafo" => 
         [
             "La recente decisione della Corte di giustizia dell'Unione europea ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.",
@@ -39,7 +45,7 @@ $dati=[
     ],
     [
         "Title" => "Come fa Google a proteggere la mia privacy e a tenere le mie informazioni al sicuro?" ,
-        "title-tag" => "h2",
+        "title-tag" => "h3",
         "paragrafo" => 
         [
             "Sappiamo che la sicurezza e la privacy sono importanti per te e lo sono anche per noi. Per noi è imperativo offrire un'elevata sicurezza e assicurarti che le tue informazioni sono al sicuro e accessibili quando ne hai bisogno.",
@@ -51,7 +57,7 @@ $dati=[
 
     [
         "Title" => "Scopri quali misure adottiamo per garantire protezione e sicurezza alle tue informazioni personali, lasciando a te il controllo.",
-        "title-tag" =>"h2",
+        "title-tag" =>"h3",
         "paragrafo" =>
         [
             "Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:",
@@ -71,7 +77,7 @@ $dati=[
     ],
     [
         "Title" => "Stabilire il paese associato al tuo account",
-        "title-tag" => "h2",
+        "title-tag" => "h4",
         "paragrafo" =>
         [
             "Quando crei un nuovo Account Google, lo associamo a un paese in base a dove è stato creato. Per quanto riguarda gli account creati almeno un anno fa, usiamo il paese da cui accedi solitamente ai servizi Google, in genere i servizi in cui hai trascorso più tempo nell'ultimo anno.",
@@ -82,7 +88,7 @@ $dati=[
     ],
     [
         "Title" => "Come faccio a rimuovere informazioni su di me dai risultati di ricerca di Google?",
-        "title-tag" => "h2",
+        "title-tag" => "h3",
         "paragrafo"=>
         [
             "I risultati di ricerca di Google rispecchiano i contenuti pubblicamente disponibili sul Web. I motori di ricerca non possono rimuovere i contenuti direttamente dai siti web, quindi rimuovere risultati di ricerca da Google non consente di rimuovere i contenuti dal Web. Se desideri rimuovere qualcosa dal Web, devi contattare il webmaster del sito su cui sono pubblicati i contenuti e chiedergli di apportare una modifica. Inoltre, se, ai sensi delle leggi europee per la protezione dei dati, desideri richiedere la rimozione di determinate informazioni su di te visualizzate nei risultati di ricerca di Google, fai clic qui. Una volta che i contenuti saranno stati rimossi e che Google avrà rilevato l'aggiornamento, le informazioni non verranno più visualizzate nei risultati di ricerca di Google. In caso di una richiesta di rimozione urgente, è inoltre possibile visitare la nostra pagina di assistenza per avere ulteriori informazioni.",
@@ -91,7 +97,7 @@ $dati=[
     
     [
         "Title" => "Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?",
-        "title-tag" => "h2",
+        "title-tag" => "h3",
         "paragrafo"=>
         [
             "In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio.",
@@ -99,23 +105,6 @@ $dati=[
     ]
 ];
 
-foreach ($dati as $value) {
-    $titolo = $value["Title"];
-    $tag = $value["title-tag"];
-    echo $titolo;
-    
-    foreach ($value as $ky =>  $val) {
-
-        
-    }
-    foreach($val as $par){
-        $testo = $par;
-        echo $testo;
-        
-    }
-   
-   
-}
 
 
 ?>
@@ -138,17 +127,47 @@ foreach ($dati as $value) {
                 <h3 class="text-style">Privacy & Termini</h3>
             </div>
             <div class="pt-4">
-                <ul class="lista-style p-0">
-                    <li class="style-el"><a href="">Introduzione</a></li>
-                    <li class="style-el" ><a href="">Norme sulla Privacy</a></li>
-                    <li class="style-el"><a href="">Termini Di Servizio</a></li>
-                    <li class="style-el"><a href="">Tecnologie</a></li>
-                    <li class="style-el"><a href="">Domande Frequenti</a></li>     
+            <ul class="lista-style p-0">
+            <?php 
+              foreach ($linkPage as $key => $value) {
+                $nameLink = $value["titolo"];
+                $linkPagina = $value["linkAssegnato"];
+            ?> <li class="style-el"><?php echo "<a href=$linkPagina> $nameLink </a>" ?></li>
+
+            <?php
+        
+              }?>
                 </ul>
+                
             </div>
         </div>
     </header>
-    <main></main>
+    <main>
+        <div class="container-sm pt-3">
+        <?php
+            foreach ($dati as $value) {
+                $titolo = $value["Title"];
+                $tag = $value["title-tag"];
+                ?> <?php echo "<$tag> $titolo </$tag>" ?>
+                <?php
+                
+
+                foreach ($value as $ky =>  $val) {
+            
+                    
+                }
+                foreach($val as $par){
+                    $testo = $par;
+                ?> <p><?php echo $testo ?></p>
+                <?php
+                }
+               
+            }
+        ?>
+        </div>
+    </main>
+
+
     
 </body>
 </html>
